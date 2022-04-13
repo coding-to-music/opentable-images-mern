@@ -26,7 +26,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "concurrently -r -k \"webpack --watch --mode=development\" \"rails s\"",
-    "postinstall": "webpack -p"
+    "postinstall": "webpack -p",
+    "deploy": "git add . && git commit -m Heroku && git push && git push heroku && heroku logs --tail --remote heroku"
   },
   "keywords": [],
   "author": "",
